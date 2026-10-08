@@ -1,89 +1,95 @@
-<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 280" width="100%" height="280">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#05070A"/>
-      <stop offset="0.48" stop-color="#0A0F17"/>
-      <stop offset="1" stop-color="#05070A"/>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060B"/>
+      <stop offset="50%" stop-color="#070A13"/>
+      <stop offset="100%" stop-color="#0B101E"/>
     </linearGradient>
-    <linearGradient id="red" x1="40" y1="60" x2="650" y2="320" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF3D45"/>
-      <stop offset="1" stop-color="#8C1018"/>
-    </linearGradient>
-    <linearGradient id="blue" x1="590" y1="50" x2="1160" y2="330" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#46B8FF"/>
-      <stop offset="1" stop-color="#1557B0"/>
-    </linearGradient>
-    <linearGradient id="steel" x1="0" y1="0" x2="1200" y2="380" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#8995A4"/>
-      <stop offset="0.5" stop-color="#D9E1EA"/>
-      <stop offset="1" stop-color="#53606E"/>
-    </linearGradient>
-    <filter id="glowRed" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <!-- Neon Glow Filter -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
-    <filter id="glowBlue" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+    <filter id="redGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
     </filter>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
-      <path d="M34 0H0V34" stroke="#1B2A3A" stroke-width="1" opacity="0.45"/>
-      <circle cx="2" cy="2" r="1.2" fill="#2E4055" opacity="0.75"/>
+
+    <!-- Linear Gradients for Accents -->
+    <linearGradient id="primeLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0D55"/>
+      <stop offset="50%" stop-color="#7B2CBF"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+
+    <!-- Perspective Grid Pattern -->
+    <pattern id="synthGrid" width="40" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.12"/>
     </pattern>
   </defs>
 
-  <rect width="1200" height="380" rx="18" fill="url(#bg)"/>
-  <rect x="1" y="1" width="1198" height="378" rx="17" stroke="#263444" stroke-width="2"/>
-  <rect x="18" y="18" width="1164" height="344" rx="12" fill="url(#grid)" opacity="0.8"/>
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+    .display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 900; letter-spacing: 4px; }
+  </style>
 
-  <!-- Red energy field -->
-  <path d="M0 305 L275 130 L430 175 L165 380 H0Z" fill="#7F0D15" opacity="0.32"/>
-  <path d="M0 245 L235 92 L455 155 L255 265 L120 330 L0 330Z" fill="#E53935" opacity="0.12"/>
-  <path d="M28 298L254 148L424 192L196 345" stroke="#FF3D45" stroke-width="2" opacity="0.75"/>
-  <path d="M12 323L247 162L450 205" stroke="#B71C1C" stroke-width="1" opacity="0.9"/>
+  <!-- Canvas Base -->
+  <rect width="950" height="280" rx="12" fill="url(#bgGrad)" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.3"/>
 
-  <!-- Blue energy field -->
-  <path d="M1200 75 L915 148 L785 74 L1000 0 H1200Z" fill="#0B3E7A" opacity="0.38"/>
-  <path d="M1200 220 L920 312 L768 246 L1014 170 L1200 145Z" fill="#1976D2" opacity="0.12"/>
-  <path d="M1170 92L936 160L792 91L1040 35" stroke="#46B8FF" stroke-width="2" opacity="0.72"/>
-  <path d="M1182 230L936 304L766 239" stroke="#1976D2" stroke-width="1" opacity="0.9"/>
-
-  <!-- Central mechanical crest -->
-  <g transform="translate(600 188)">
-    <path d="M0 -111 L58 -82 L87 -17 L70 71 L0 112 L-70 71 L-87 -17 L-58 -82 Z" fill="#0D131B" stroke="url(#steel)" stroke-width="3"/>
-    <path d="M0 -90 L35 -70 L51 -18 L38 58 L0 81 L-38 58 L-51 -18 L-35 -70 Z" fill="#121C27" stroke="#3F5265" stroke-width="2"/>
-    <path d="M-57 -33L-18 -45L0 -17L18 -45L57 -33L41 6L29 18L18 -7L0 21L-18 -7L-29 18L-41 6Z" fill="#25384C"/>
-    <path d="M-20 -63L0 -78L20 -63L12 -36L0 -27L-12 -36Z" fill="url(#steel)"/>
-    <path d="M-62 22L-23 8L-9 44L-39 64Z" fill="url(#red)" opacity="0.9"/>
-    <path d="M62 22L23 8L9 44L39 64Z" fill="url(#blue)" opacity="0.9"/>
-    <path d="M-35 82L0 96L35 82" stroke="#FF3D45" stroke-width="4" filter="url(#glowRed)"/>
-    <path d="M-18 97L0 104L18 97" stroke="#46B8FF" stroke-width="3" filter="url(#glowBlue)"/>
+  <!-- Cyberpunk Perspective Grid Floor -->
+  <g opacity="0.6">
+    <rect y="170" width="950" height="110" fill="url(#synthGrid)"/>
+    <line x1="0" y1="170" x2="950" y2="170" stroke="url(#primeLaser)" stroke-width="1.5" filter="url(#cyanGlow)" />
   </g>
 
-  <!-- Tech rails -->
-  <g stroke="#334456" stroke-width="2" opacity="0.9">
-    <path d="M40 48H290L320 70"/>
-    <path d="M880 48H1160L1180 64"/>
-    <path d="M42 332H300L325 312"/>
-    <path d="M875 332H1156L1180 312"/>
-  </g>
-  <g fill="#46B8FF">
-    <circle cx="54" cy="48" r="4"/><circle cx="1146" cy="48" r="4"/>
-  </g>
-  <g fill="#FF3D45">
-    <circle cx="54" cy="332" r="4"/><circle cx="1146" cy="332" r="4"/>
+  <!-- HUD Corner Markers -->
+  <path d="M 20 40 L 20 20 L 40 20" fill="none" stroke="#FF0D55" stroke-width="2" />
+  <path d="M 930 40 L 930 20 L 910 20" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 20 240 L 20 260 L 40 260" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 930 240 L 930 260 L 910 260" fill="none" stroke="#FF0D55" stroke-width="2" />
+
+  <!-- Telemetry Sub-Labels Top -->
+  <text x="35" y="42" class="mono" font-size="9" fill="#FF0D55" letter-spacing="2">SYS_CORE // OPTIMUS_PROTOCOLS</text>
+  <text x="760" y="42" class="mono" font-size="9" fill="#00F0FF" letter-spacing="2">MATRIX: SYNCHRONIZED [OK]</text>
+
+  <!-- Center Crest Symbol (Stylized Abstract Autobot Core Matrix) -->
+  <g transform="translate(475, 80)">
+    <!-- Outer Diamond Conduit -->
+    <polygon points="0,-45 40,0 0,45 -40,0" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.4"/>
+    <polygon points="0,-32 28,0 0,32 -28,0" fill="none" stroke="#FF0D55" stroke-width="1.8" filter="url(#redGlow)"/>
+    <!-- Core Spark -->
+    <circle cx="0" cy="0" r="8" fill="#00F0FF" filter="url(#cyanGlow)"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <!-- Lateral Energy Wings -->
+    <line x1="-40" y1="0" x2="-120" y2="0" stroke="url(#primeLaser)" stroke-width="1.5" />
+    <line x1="40" y1="0" x2="120" y2="0" stroke="url(#primeLaser)" stroke-width="1.5" />
   </g>
 
-  <!-- Main title -->
-  <text x="600" y="52" text-anchor="middle" fill="#8090A3" font-family="monospace" font-size="14" font-weight="700" letter-spacing="5">CYBERTRONIAN DEVELOPMENT NETWORK</text>
-  <text x="600" y="305" text-anchor="middle" fill="#F3F6FA" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="800" letter-spacing="8">THE007PRIME</text>
-  <text x="600" y="335" text-anchor="middle" fill="#C4D0DE" font-family="monospace" font-size="13" letter-spacing="4">AI • ML • GENERATIVE AI • RAG • SYSTEMS</text>
+  <!-- Main Hero Title -->
+  <text x="475" y="152" text-anchor="middle" class="display" font-size="34" fill="#FFFFFF">
+    THE <tspan fill="#FF0D55">007</tspan> <tspan fill="#00F0FF">PRIME</tspan>
+  </text>
 
-  <!-- Status blocks -->
-  <g font-family="monospace" font-size="11" font-weight="700">
-    <rect x="50" y="74" width="168" height="28" rx="6" fill="#0B1118" stroke="#7E1B21"/>
-    <text x="62" y="93" fill="#FF4A52">● PRIME CHANNEL // RED</text>
-    <rect x="982" y="74" width="168" height="28" rx="6" fill="#0B1118" stroke="#205D95"/>
-    <text x="995" y="93" fill="#46B8FF">● ENERGON // BLUE</text>
-  </g>
+  <!-- Secondary Cyber Subtitle -->
+  <text x="475" y="182" text-anchor="middle" class="mono" font-size="12" fill="#E2E8F0" letter-spacing="5">
+    AI ARCHITECT // CYBERNETIC RESEARCHER // AUTONOMOUS SYSTEMS
+  </text>
+
+  <!-- Bottom Terminal Status Bar -->
+  <rect x="180" y="215" width="590" height="28" rx="4" fill="#070A13" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="205" cy="229" r="4" fill="#00F0FF" filter="url(#cyanGlow)"/>
+  <text x="220" y="233" class="mono" font-size="10" fill="#8A99AD" letter-spacing="1.5">
+    STATUS: <tspan fill="#00F0FF">ONLINE</tspan> | CORE: <tspan fill="#FF0D55">LEARNING BY BUILDING</tspan> | DIRECTIVE: <tspan fill="#FFFFFF">PRIME</tspan>
+  </text>
 </svg>
