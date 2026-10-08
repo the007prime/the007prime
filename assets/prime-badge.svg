@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="b" x1="24" y1="20" x2="236" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4149"/>
+      <stop offset="0.5" stop-color="#111A24"/>
+      <stop offset="1" stop-color="#1976D2"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="244" height="244" rx="26" fill="#070A0F" stroke="#334457" stroke-width="4"/>
+  <path d="M31 53L70 22H186L225 53L238 116L205 195L128 232L51 195L18 116L31 53Z" fill="#0D151F" stroke="url(#b)" stroke-width="5"/>
+  <path d="M128 33L178 53L201 101L186 177L128 208L70 177L55 101L78 53L128 33Z" fill="#101D2B" stroke="#556A7F" stroke-width="3"/>
+  <path d="M128 60L156 79L165 112L149 148L128 162L107 148L91 112L100 79L128 60Z" fill="#D7DEE6"/>
+  <path d="M93 109L116 101L128 116L140 101L163 109L153 134L128 126L103 134L93 109Z" fill="#273A50"/>
+  <path d="M56 143L96 151L77 188L45 178Z" fill="#A71922"/>
+  <path d="M200 143L160 151L179 188L211 178Z" fill="#155D9E"/>
+  <path d="M103 171L128 184L153 171L146 193L128 204L110 193Z" fill="#121A24"/>
+  <path d="M91 212L128 228L165 212" stroke="#E53935" stroke-width="5"/>
+  <path d="M112 222L128 230L144 222" stroke="#1976D2" stroke-width="4"/>
+</svg>
