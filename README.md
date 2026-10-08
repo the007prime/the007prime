@@ -10,7 +10,7 @@
 
 # `THE007`
 
-### AI / ML ENGINEER
+### AI / ML ENTHUSIAST
 
 **Machine Learning • Generative AI • RAG • LLMs • Linux**
 
