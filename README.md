@@ -62,13 +62,6 @@ I value **understanding over abstraction** — learning the underlying concepts,
 
 ---
 
-## GitHub Activity
-
-<div align="center">
-
-<img src="./assets/metrics.svg" width="100%" alt="GitHub activity and contribution metrics"/>
-
-</div>
 
 ---
 
